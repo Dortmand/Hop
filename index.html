@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expiration Management - Hop Hey</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
+</head>
+<body>
+    <h1>Управление сроками годности товаров</h1>
+
+    <form id="productForm">
+        <label for="productName">Название товара:</label>
+        <input type="text" id="productName" name="productName">
+
+        <label for="productClass">Класс товара:</label>
+        <select id="productClass" name="productClass">
+            <option value="штучный">Штучный</option>
+            <option value="весовой">Весовой</option>
+            <option value="бутылочный">Бутылочный</option>
+        </select>
+
+        <label for="expirationType">Тип срока:</label>
+        <select id="expirationType" name="expirationType">
+            <option value="начальный">Начальный</option>
+            <option value="конечный">Конечный</option>
+        </select>
+
+        <label for="expirationDate">Дата окончания/Количество дней:</label>
+        <input type="text" id="expirationDate" name="expirationDate" class="flatpickr">
+
+        <label for="productPhoto">Фото товара:</label>
+        <input type="file" id="productPhoto" name="productPhoto" accept="image/*">
+
+        <button type="submit">Добавить товар</button>
+    </form>
+
+    <div id="productList">
+        <h2>Список товаров</h2>
+        <ul></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
